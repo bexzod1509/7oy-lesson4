@@ -35,6 +35,7 @@ function Checkout() {
       totalPrice: total + 16,
     };
     console.log(data);
+    toast.success("Thank you for your purchase");
   };
   let maxsulot = cart?.map((item) => (
     <div
@@ -196,14 +197,7 @@ function Checkout() {
               </div>
             </div>
           </div>
-          <button
-            type="submit"
-            onClick={() => {
-              toast.success("Thank you for your purchase");
-            }}
-          >
-            Place Order
-          </button>
+          <button type="submit">Place Order</button>
           <div className="e3">
             <img src={ellipse} alt="" />
             <p>Ship to a different address?</p>
